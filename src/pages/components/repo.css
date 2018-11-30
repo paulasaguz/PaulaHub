@@ -1,0 +1,42 @@
+.Repo {
+  animation: .5s repo;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #d1d5da;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.Repo h3 {
+  margin: 5px 0;
+  color:#0366d6;
+  font-weight: 600;
+  font-size:20px;
+  font-family: inherit;
+}
+.Repo small {
+  color: #586069;
+}
+.properties {
+  list-style: none;
+  font-size:12px;
+  font-family: inherit;
+}
+.properties li {
+  color:#586069;
+  display: inline-block;
+  padding: 0 10px;
+}
+.Repo h3:hover {
+  text-decoration: underline;
+}
+@keyframes repo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.container-star {
+  display: flex;
+}
