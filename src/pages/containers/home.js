@@ -5,14 +5,17 @@ import API from '../../lib/api';
 import Form from '../components/form';
 import RepoList from '../components/repo-list';
 import Layout from '../components/layout';
-import UserList  from '../components/user-list';
+import UserInfo  from '../components/user-info';
+import InfoBanner from '../components/info-banner'
 
 class Home extends Component {
   state = {
     repos: [],
+    user: [],
     stars: []
+    // loader : false
   }
-
+  
   handleSubmit = (event) => {
     event.preventDefault()
     const form = new FormData(this.form)
@@ -21,10 +24,10 @@ class Home extends Component {
     API.getRepositoriesByUsername(this.username)
     .then((repos) => {
       this.setState({
-        repos
+        repos, 
+        user: repos[1].owner
       })
     })
-
   }
   handleRepoClick = (repoName) => {
     API.getTopicsByRepository(this.username, repoName)
@@ -51,13 +54,12 @@ class Home extends Component {
   render() {
 		return(
       <Fragment>
-        <Header/>
+        <Header user={this.state.user}/>
         <Layout>
-          <UserList repos={this.state.repos}/>
-          <div> 
-            <Form handleSubmit={this.handleSubmit} setRef={this.setRef} />
-            <RepoList repos={this.state.repos} handleRepoClick={this.handleRepoClick} />
-          </div>
+          <UserInfo user={this.state.user}/>
+          <InfoBanner repos={this.state.repos}/>
+          <Form handleSubmit={this.handleSubmit} setRef={this.setRef} />
+          <RepoList repos={this.state.repos} handleRepoClick={this.handleRepoClick} />
         </Layout>
         <Footer/>
       </Fragment>

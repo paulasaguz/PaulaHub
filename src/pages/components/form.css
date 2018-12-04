@@ -1,11 +1,39 @@
+.Form {
+  display: flex;
+  padding: 16px 0
+}
 .search {
+  margin-right: 15px;
   border:1px solid #d1d5da;
   padding: 6px 8px;
-  min-height:22px;
-  width: 392px;
+  width: 374px;
+  height: 20px;
   border-radius: 2px;
-  box-shadow: 0 0 0.2em 0.2em rgb(147, 187, 248);
 }
 .search::placeholder{
   color: #d1d5da;
+}
+.search:focus {
+  box-shadow: 0 0 0 0.2em rgba(27,31,35,.075);
+}
+.FormButton {
+  color:#24292e;
+  border: 1px solid rgba(27,31,35,.2);
+  border-radius: .25em;
+  cursor:pointer;
+  font-size: 14px;
+  padding: 6px 12px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.FormButton.greyButton{
+  background-color: #eff3f6;
+  margin: 0 2px;
+}
+.FormButton.new {
+  background-color: #2DC14F;
+  color:white;
+}
+.new {
+  margin: 0 10px;
 }
