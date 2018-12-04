@@ -12,6 +12,10 @@
   grid-row-start: 1; /*inicio del grid vertical */
   grid-row-end: -1; 
 }
+.Layout .userFav {
+  grid-row-start: 2; /*inicio del grid vertical */
+  grid-row-end: -1; 
+}
 .Layout .Form {
   grid-column-start: 2; /*inicio del grid horizontal */
   grid-column-end: -1;

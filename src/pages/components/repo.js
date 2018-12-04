@@ -34,7 +34,7 @@ function Repo(props) {
         <span className="language" style={styleLanguage}></span>
         <li>{props.language}</li>
         <li><StarIcon size={12} color="grey" view="0 0 14 16"/> {props.stargazers_count}</li>
-        <li><Forks size={12} color="grey" view="0 0 10 16"/> {props.forks_count}</li>
+        <li><Forks size={10} height={14} color="grey" view="0 0 10 16"/> {props.forks_count}</li>
       </p>
       <div className="container-star">
       {

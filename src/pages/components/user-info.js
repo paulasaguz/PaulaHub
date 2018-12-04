@@ -3,7 +3,9 @@ import './userInfo.css';
 
 function UserInfo({user}){
   if(!user.login){
-    return null
+    return (
+      <p className="userFav">Escribe el nombre de tu usuario favorito :)</p>
+    )
   }
   return(
     <div className="userInfo">

@@ -6,7 +6,7 @@ function InfoBanner({repos}){
   return (
     <div className="InfoBanner">
       <li>Overview</li>
-      <li className="active"><strong>Repositories</strong><span className="Repolength">{repos.length}</span> </li>
+      <li className="active"><strong>Repositories</strong> <span className="Repolength">{repos.length}</span> </li>
       <li>Stars</li>
       <li>Followers</li>
       <li>Following</li>
